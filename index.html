@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edjutawee Dawit | AI Research Engineer</title>
+    <title>Edjutawee Dawit</title>
     <style>
         :root {
-            --bg: #fafafa;
-            --surface: #ffffff;
-            --text-main: #171717;
-            --text-muted: #52525b;
-            --accent: #2563eb;
-            --accent-light: #eff6ff;
-            --border: #e4e4e7;
-            --tag-bg: #f4f4f5;
-            --tag-text: #3f3f46;
+            --text-main: #111111;
+            --text-muted: #666666;
+            --bg-color: #ffffff;
+            --border-color: #eaeaea;
+            --link-color: #000000;
         }
 
         * {
@@ -24,398 +20,364 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg);
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+            background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.5;
             -webkit-font-smoothing: antialiased;
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 3rem 2rem;
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 4rem;
+            padding: 4rem 2rem;
         }
 
-        /* Sidebar Styling */
-        .sidebar {
-            position: sticky;
-            top: 3rem;
-            height: max-content;
+        header {
+            margin-bottom: 4rem;
         }
 
-        .profile-name {
-            font-size: 2.25rem;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.03em;
-        }
-
-        .profile-title {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            font-weight: 500;
-            margin-bottom: 2rem;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            margin-bottom: 2rem;
-            font-size: 0.95rem;
-        }
-
-        .contact-info a {
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .contact-info a:hover {
-            color: var(--accent);
-        }
-
-        .skills-section h3 {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-            margin-top: 2rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            background-color: var(--tag-bg);
-            color: var(--tag-text);
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        /* Main Content Styling */
-        .main-content {
-            min-width: 0;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
+        h1 {
+            font-size: 2rem;
             font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 2rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 2px solid var(--border);
+            margin-bottom: 0.5rem;
             letter-spacing: -0.02em;
         }
 
-        .item {
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        .contact-links a, .contact-links span {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .contact-links a:hover {
+            color: var(--link-color);
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 4rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .entry {
             margin-bottom: 2.5rem;
-            background: var(--surface);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .item:hover {
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transform: translateY(-2px);
-        }
-
-        .item-header {
+        .entry-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 0.25rem;
         }
 
-        .item-title {
-            font-size: 1.15rem;
-            font-weight: 700;
+        .entry-title {
+            font-size: 1.1rem;
+            font-weight: 600;
             color: var(--text-main);
         }
 
-        .item-date {
+        .entry-date {
             font-size: 0.9rem;
             color: var(--text-muted);
-            font-weight: 500;
-            white-space: nowrap;
         }
 
-        .item-subtitle {
+        .entry-role {
             font-size: 1rem;
-            color: var(--accent);
+            color: var(--text-main);
             font-weight: 500;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
-        .item-list {
+        .entry-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        ul {
             padding-left: 1.25rem;
             color: var(--text-muted);
             font-size: 0.95rem;
         }
 
-        .item-list li {
-            margin-bottom: 0.5rem;
+        li {
+            margin-bottom: 0.4rem;
         }
 
-        .item-list li strong {
+        strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .skill-category {
+            font-weight: 600;
             color: var(--text-main);
         }
 
-        /* Media Queries */
-        @media (max-width: 900px) {
-            .container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+        .skill-list {
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 600px) {
+            .entry-header {
+                flex-direction: column;
             }
-            .sidebar {
-                position: relative;
-                top: 0;
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 0.25rem;
+                margin-bottom: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <h1 class="profile-name">Edjutawee Dawit</h1>
-            <div class="profile-title">AI Research Engineer</div>
+    <header>
+        <h1>Edjutawee Dawit</h1>
+        <div class="subtitle">AI Research Engineer &bull; ML Infrastructure &bull; Scaling Laws</div>
+        <div class="contact-links">
+            <span>📍 NYC</span>
+            <a href="mailto:edjutaweedawit@gmail.com">✉️ edjutaweedawit@gmail.com</a>
+            <a href="https://github.com/edawite" target="_blank">🐙 github.com/edawite</a>
+            <a href="https://linkedin.com/in/edjutawee" target="_blank">💼 linkedin.com/in/edjutawee</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Education</h2>
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Purdue University</div>
+                <div class="entry-date">Expected May 2027</div>
+            </div>
+            <div class="entry-role">B.S. in Artificial Intelligence</div>
+            <div class="entry-meta">Coursework: Data Structures & Algorithms, Object-Oriented Programming, Data Engineering in Python</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Microsoft</div>
+                <div class="entry-date">May 2026 – Aug 2026</div>
+            </div>
+            <div class="entry-role">Software Engineer Intern, Azure Reliability</div>
+            <ul>
+                <li>Shipped <strong>SHAP explanations and model monitoring</strong> (PSI/KS drift checks) for a production XGBoost risk platform, combining label-free performance estimates and fail-safe reports.</li>
+                <li>Designed a <strong>15-case, five-metric evaluation harness</strong> for risk accuracy, SHAP faithfulness, groundedness, feature overlap, and offline F1, backed by 200+ automated tests.</li>
+                <li>Integrated grounded LLM narratives into HTTP and Azure Storage Queue inference paths; isolated contextualization failures with bounded-latency fallback.</li>
+                <li>Provisioned private, keyless Azure OpenAI with Bicep and Entra ID/managed identity.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Eli Lilly</div>
+                <div class="entry-date">Nov 2025 – May 2026</div>
+            </div>
+            <div class="entry-role">LLM Researcher</div>
+            <ul>
+                <li>Engineered a modular Python framework leveraging LLMs to enrich cybersecurity indicators with automated tagging, contextual narratives, and inter-indicator relationship mapping.</li>
+                <li>Built an LLM cybersecurity-intelligence system and adversarial evaluation workflow; exposed confident, incorrect threat conclusions under prompt perturbations and conflicting evidence.</li>
+                <li>Designed a production-ready architecture with Dockerized deployment, JSON-based data contracts, and extensible APIs for enterprise threat analysis pipelines.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">NASA Earth Science Technology Office (ESTO)</div>
+                <div class="entry-date">May 2025 – Aug 2025</div>
+            </div>
+            <div class="entry-role">ML Engineer / AI Researcher</div>
+            <ul>
+                <li>Engineered a hybrid flood detection system achieving <strong>0.92 IoU and 10× CPU speedup</strong> vs UNet baseline through a PyTorch→ONNX→TensorRT optimization pipeline for edge deployment.</li>
+                <li>Developed a real-time SAR image processing pipeline for Sentinel-1 satellite tiles, achieving <strong>250ms inference latency</strong> and enabling 5% faster flood detection response.</li>
+                <li>Architected a modular, fault-tolerant system with a reproducible evaluation harness, improving challenge submission scores by 8%.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Purdue University</div>
+                <div class="entry-date">Spring 2025</div>
+            </div>
+            <div class="entry-role">Computational Researcher</div>
+            <ul>
+                <li>Engineered a fully autonomous AI research assistant screening 2,000+ academic papers using Selenium, GPT-4 API, and local Ollama models—reducing faculty workload by 95%.</li>
+                <li>Automated real-time browser workflows, abstract extraction, and pedagogy tagging using LLM prompts, regex parsing, and logic filters.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Purdue University</div>
+                <div class="entry-date">Jan 2025 – May 2025</div>
+            </div>
+            <div class="entry-role">Backend Engineer</div>
+            <ul>
+                <li>Built a distributed document processing pipeline using Python multiprocessing + Redis, achieving <strong>100+ papers/hour throughput</strong> across 2,000+ academic papers with 95% automation accuracy.</li>
+                <li>Engineered a fault-tolerant system with checkpointing and idempotent job processing, deployed on AWS EC2 spot instances with auto-scaling capabilities.</li>
+                <li>Implemented comprehensive monitoring with Prometheus metrics and Grafana dashboards tracking p95 latency, throughput, and cost optimization.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">CorpusKey</div>
+                <div class="entry-date">Jun 2024 – Aug 2024</div>
+            </div>
+            <div class="entry-role">Full-Stack Software Engineer Intern</div>
+            <ul>
+                <li>Designed an AI-powered lesson planning platform serving 500+ educators with React + Flask microservices, achieving 99.5% uptime and a 70% reduction in planning time.</li>
+                <li>Implemented ChatGPT API integration with rate limiting and caching; optimized PostgreSQL queries with indexing strategies for <strong>sub-100ms response times</strong>.</li>
+                <li>Created a CI/CD pipeline with GitHub Actions and Docker containerization; reduced production deploy time from 15 minutes to 3 minutes with zero-downtime releases.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">John P Stevens</div>
+                <div class="entry-date">Spring 2024</div>
+            </div>
+            <div class="entry-role">Machine Learning Researcher</div>
+            <ul>
+                <li>Conducted hyperparameter sweeps and ablation studies comparing SVM, Gradient Boosting, LSTM, and ANN models across 3 real-world datasets.</li>
+                <li>Cross-validated with 50+ academic sources and implemented reproducible baselines from Hugging Face and PyTorch.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Independent AI Researcher</div>
+                <div class="entry-date">Winter 2024</div>
+            </div>
+            <div class="entry-role">Reinforcement Learning Chess Agent</div>
+            <ul>
+                <li>Developed a reinforcement learning chess agent trained via self-play and policy gradients, evaluated against Stockfish.</li>
+                <li>Automated gameplay via Selenium, training the agent to <strong>1800 ELO</strong> (top 15% of players) in 500+ self-play episodes.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Temple University</div>
+                <div class="entry-date">Summer 2023</div>
+            </div>
+            <div class="entry-role">Computer Vision Researcher</div>
+            <ul>
+                <li>Developed and evaluated Convolutional Neural Networks (CNNs) for image classification, focusing on model optimization techniques.</li>
+                <li>Applied transfer learning and data augmentation to boost accuracy and reduce overfitting in low-resource image datasets.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Publications & Preprints</h2>
+
+        <div class="entry">
+            <div class="entry-title">FinRL Contest 2025 Task 1: Reinforcement Learning for SPY Trading</div>
+            <div class="entry-meta">Accepted to IEEE IDS 2025 (FinRLFM Track)</div>
+            <ul>
+                <li>Evaluated 5 Deep RL algorithms (DQN, Double DQN, PPO, SAC, A2C) in continuous action environments.</li>
+                <li>Integrated DeepSeek LLM sentiment scores to improve the A2C portfolio's Sharpe Ratio by 12%.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-title">A Two-Phase Scaling Law for Neural Chess Search</div>
+            <div class="entry-meta">Preprint / IEEE CoG Submission</div>
+            <ul>
+                <li>Designed and parallelized a fixed-anchor tournament of <strong>7,000+ games</strong> across an HPC cluster to evaluate Stockfish 16 (NNUE) scaling efficiency.</li>
+                <li>Identified a Two-Phase scaling law, proving highly accurate neural priors reduce the marginal utility of deep search by ~66% relative to classical baselines.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-title">When Annealed Causal Erasure Fails to Induce Algorithmic Transfer</div>
+            <div class="entry-meta">Submitted to NeurIPS 2026 PriGM Workshop</div>
+            <ul>
+                <li>Implemented a custom training intervention (Annealed Causal Erasure) to suppress operand-position residual states in Transformers using 3 WAIT tokens.</li>
+                <li>Analyzed grokking and representation transfer across 24 modular-inversion runs, identifying a 100% train / 0% test separation.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Projects & Open Source</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Jane Street [Project Name]</div>
+            </div>
+            <ul>
+                <li><em>[Please update this section with the details of your Jane Street project/competition]</em></li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Performance Engineering & Model Optimization</div>
+            </div>
+            <ul>
+                <li><strong>Anthropic Public Benchmark:</strong> Reduced simulated cycles from 147,734 to 1,026 (<strong>144x reduction</strong>) using dependency-DAG scheduling, SIMD fusion, and software pipelining.</li>
+                <li><strong>OpenAI Parameter Golf:</strong> Built a CPU-trained Transformer and n-gram ensemble; cut BPB 5.3%. Packed model, sidecars, and evaluator code into a <strong>15.95 MB payload</strong> by delta-coding 1.33M n-gram contexts.</li>
+                <li><strong>Serverless Image Pipeline:</strong> Built an AWS S3/Lambda pipeline optimizing cold-start latency to 250ms via provisioned concurrency and SQS buffering.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Google DeepMind Libraries (Open Source)</div>
+            </div>
+            <ul>
+                <li><strong>Optax #1413 & Haiku #846:</strong> Merged learning-rate schedule edge cases and LayerNorm dtype/JIT regression tests, refined through maintainer review.</li>
+                <li><strong>OpenSpiel #1557:</strong> Implemented Quarto in C++, including two-phase turns, win detection, undo, and tensor observations.</li>
+                <li><strong>Distrax #334:</strong> Corrected JAX pytree handling for AOT compilation with donated arguments.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">Languages & ML</div>
+            <div class="skill-list">Python, C++, Java, TypeScript, SQL, Bash, PyTorch, JAX, XGBoost, SHAP, ONNX, TensorRT</div>
             
-            <div class="contact-info">
-                <a href="mailto:edjutaweedawit@gmail.com">✉️ edjutaweedawit@gmail.com</a>
-                <a href="https://github.com/edawite" target="_blank">🐙 github.com/edawite</a>
-                <a href="https://linkedin.com/in/edjutawee" target="_blank">💼 linkedin.com/in/edjutawee</a>
-                <span style="color: var(--text-muted)">📍 Atlanta, GA / Remote</span>
-                <span style="color: var(--text-muted)">🇺🇸 U.S. Citizen</span>
-            </div>
-
-            <div class="skills-section">
-                <h3>Education</h3>
-                <p style="font-weight: 600; color: var(--text-main)">Purdue University</p>
-                <p style="font-size: 0.9rem; color: var(--text-muted)">B.S. Artificial Intelligence (May 2027)</p>
-                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">GPA: 3.5<br>USACO Platinum, ICPC Regional Prep, Putnam Participant</p>
-            </div>
-
-            <div class="skills-section">
-                <h3>Core Technologies</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">JAX</span>
-                    <span class="skill-tag">TensorRT</span>
-                    <span class="skill-tag">ONNX</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Kubernetes</span>
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">Azure</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Redis</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                </div>
-            </div>
-
-            <div class="skills-section">
-                <h3>Research Focus</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Mechanistic Interpretability</span>
-                    <span class="skill-tag">Neural Scaling Laws</span>
-                    <span class="skill-tag">Model Evaluations</span>
-                    <span class="skill-tag">Deep Reinforcement Learning</span>
-                    <span class="skill-tag">High-Performance Compute</span>
-                </div>
-            </div>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 3rem; line-height: 1.7;">
-                I am an AI Research Engineer focused on building highly optimized ML infrastructure, scaling inference systems, and rigorously evaluating neural networks. My work spans deep reinforcement learning, mechanistic interpretability, and low-latency edge deployment.
-            </p>
-
-            <h2 class="section-title">Experience</h2>
-
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">Microsoft</div>
-                    <div class="item-date">May 2026 – Aug 2026</div>
-                </div>
-                <div class="item-subtitle">Software Engineer Intern, Azure Reliability | Atlanta, GA</div>
-                <ul class="item-list">
-                    <li>Shipped <strong>SHAP explanations and model monitoring</strong> (PSI/KS drift checks) for a production XGBoost risk platform, combining label-free performance estimates and fail-safe reports.</li>
-                    <li>Designed a <strong>15-case, five-metric evaluation harness</strong> for risk accuracy, SHAP faithfulness, groundedness, feature overlap, and offline F1, backed by 200+ automated tests.</li>
-                    <li>Integrated grounded LLM narratives into HTTP and Azure Storage Queue inference paths; isolated contextualization failures with bounded-latency fallback.</li>
-                    <li>Provisioned private, keyless <strong>Azure OpenAI</strong> with Bicep and Entra ID/managed identity.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">Eli Lilly</div>
-                    <div class="item-date">Nov 2025 – May 2026</div>
-                </div>
-                <div class="item-subtitle">LLM Researcher | Indianapolis, IN</div>
-                <ul class="item-list">
-                    <li>Engineered a modular Python framework leveraging LLMs to enrich cybersecurity indicators with automated tagging, contextual narratives, and inter-indicator relationship mapping.</li>
-                    <li>Built an LLM cybersecurity-intelligence system and adversarial evaluation workflow; exposed confident, incorrect threat conclusions under prompt perturbations and conflicting evidence.</li>
-                    <li>Designed a production-ready architecture with Dockerized deployment, JSON-based data contracts, and extensible APIs for enterprise threat analysis pipelines.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">Purdue University</div>
-                    <div class="item-date">Jan 2025 – Present</div>
-                </div>
-                <div class="item-subtitle">Computational & Undergraduate Researcher (Prof. Abulhair Saparov)</div>
-                <ul class="item-list">
-                    <li><strong>Interpretability Research:</strong> Ran Transformer depth sweeps (2–24 layers, 3 seeds each) on ACCESS/Anvil GPUs to study modular-arithmetic generalization; tracked behavior in Weights & Biases. Analyzed memorization, weight decay, and Fourier representations in held-out generalization.</li>
-                    <li><strong>AI Automation:</strong> Engineered a fully autonomous AI research assistant screening 2,000+ papers using Selenium, GPT-4 API, and local Ollama models—reducing faculty workload by 95%.</li>
-                    <li><strong>Backend Infrastructure:</strong> Built a distributed document processing pipeline using Python multiprocessing + Redis, achieving 100+ papers/hour throughput. Engineered a fault-tolerant, idempotent system deployed on AWS EC2 spot instances with Prometheus/Grafana monitoring.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">NASA Earth Science Technology Office</div>
-                    <div class="item-date">May 2025 – Aug 2025</div>
-                </div>
-                <div class="item-subtitle">ML Engineer / AI Researcher | Remote</div>
-                <ul class="item-list">
-                    <li>Engineered a hybrid flood detection system achieving <strong>0.92 IoU and 10× CPU speedup</strong> vs UNet baseline through a <strong>PyTorch→ONNX→TensorRT</strong> optimization pipeline for edge deployment.</li>
-                    <li>Developed a real-time SAR image processing pipeline for Sentinel-1 satellite tiles, achieving <strong>250ms inference latency</strong> and enabling 5% faster flood detection response.</li>
-                    <li>Designed a novel hybrid computing proposal integrating Quantum ML, LLMs, and neuromorphic-inspired architectures for the Beyond the Algorithm Challenge.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">CorpusKey</div>
-                    <div class="item-date">Jun 2024 – Aug 2024</div>
-                </div>
-                <div class="item-subtitle">Full-Stack Software Engineer Intern | Indianapolis, IN</div>
-                <ul class="item-list">
-                    <li>Designed an AI-powered lesson planning platform serving 500+ educators with <strong>React + Flask microservices</strong>, achieving 99.5% uptime and a 70% reduction in planning time.</li>
-                    <li>Implemented ChatGPT API integration with rate limiting and caching; optimized PostgreSQL queries with indexing strategies for <strong>sub-100ms response times</strong>.</li>
-                    <li>Created a CI/CD pipeline with GitHub Actions and Docker containerization; reduced production deploy time from 15 minutes to 3 minutes with zero-downtime releases.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">Independent AI Researcher</div>
-                    <div class="item-date">Winter 2024</div>
-                </div>
-                <div class="item-subtitle">Reinforcement Learning Chess Agent</div>
-                <ul class="item-list">
-                    <li>Developed a reinforcement learning chess agent trained via self-play and policy gradients, evaluated against Stockfish.</li>
-                    <li>Automated gameplay via Selenium, training the agent to <strong>1800 ELO</strong> (top 15% of players) in 500+ self-play episodes.</li>
-                </ul>
-            </div>
+            <div class="skill-category">Research</div>
+            <div class="skill-list">Model evaluations, red-teaming, interpretability, adversarial robustness, ablation studies</div>
             
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">John P Stevens & Temple University</div>
-                    <div class="item-date">2023 – 2024</div>
-                </div>
-                <div class="item-subtitle">Machine Learning & Computer Vision Researcher</div>
-                <ul class="item-list">
-                    <li><strong>ML Research:</strong> Conducted hyperparameter sweeps and ablation studies comparing SVM, Gradient Boosting, LSTM, and ANN models across 3 real-world datasets.</li>
-                    <li><strong>Computer Vision:</strong> Developed and evaluated CNNs for image classification, applying transfer learning and data augmentation to boost accuracy in low-resource datasets.</li>
-                </ul>
-            </div>
-
-            <h2 class="section-title">Publications & Academic Research</h2>
-
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">FinRL Contest 2025 Task 1: Reinforcement Learning for SPY Trading</div>
-                    <div class="item-date">2025</div>
-                </div>
-                <div class="item-subtitle">Accepted to IEEE IDS 2025 (FinRLFM Track)</div>
-                <ul class="item-list">
-                    <li>Evaluated 5 Deep RL algorithms (DQN, Double DQN, PPO, SAC, A2C) in continuous action environments.</li>
-                    <li>Integrated DeepSeek LLM sentiment scores to improve the A2C portfolio's Sharpe Ratio by 12%.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">A Two-Phase Scaling Law for Neural Chess Search</div>
-                    <div class="item-date">2026</div>
-                </div>
-                <div class="item-subtitle">Preprint / IEEE CoG Submission</div>
-                <ul class="item-list">
-                    <li>Designed and parallelized a fixed-anchor tournament of <strong>7,000+ games</strong> across an HPC cluster to evaluate Stockfish 16 (NNUE) scaling efficiency.</li>
-                    <li>Identified a Two-Phase scaling law, proving highly accurate neural priors reduce the marginal utility of deep search by ~66% (+34 Elo per ply) relative to classical baselines.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">When Annealed Causal Erasure Fails to Induce Algorithmic Transfer</div>
-                    <div class="item-date">2026</div>
-                </div>
-                <div class="item-subtitle">Submitted to NeurIPS 2026 PriGM Workshop</div>
-                <ul class="item-list">
-                    <li>Implemented a custom training intervention (Annealed Causal Erasure) to suppress operand-position residual states in Transformers using 3 WAIT tokens.</li>
-                    <li>Analyzed grokking and representation transfer across 24 modular-inversion runs, identifying a 100% train / 0% test separation.</li>
-                </ul>
-            </div>
-
-            <h2 class="section-title">Engineering Projects & Open Source</h2>
-
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">Performance Engineering & Optimization</div>
-                </div>
-                <ul class="item-list" style="margin-top: 0.5rem;">
-                    <li><strong>Anthropic Public Benchmark:</strong> Reduced simulated cycles from 147,734 to 1,026 (<strong>144x reduction</strong>) using dependency-DAG scheduling, SIMD fusion, and software pipelining. Passed all 9 original tests.</li>
-                    <li><strong>OpenAI Parameter Golf:</strong> Built a CPU-trained Transformer and n-gram ensemble; cut BPB 5.3% on 2.1M validation tokens. Packed model, sidecars, and evaluator code into a <strong>15.95 MB payload</strong> by delta-coding 1.33M n-gram contexts.</li>
-                    <li><strong>LLMOps Monitoring Platform:</strong> Designed a multi-tenant dashboard tracking token latency/cost. Achieved &lt;50ms p95 refresh rates with persistent log storage via AWS EC2, Docker Compose, and Nginx.</li>
-                    <li><strong>Serverless Image Pipeline:</strong> Built an end-to-end AWS S3/Lambda pipeline converting 1,000+ images/min to WebP, optimizing cold-start latency to 250ms via provisioned concurrency and SQS buffering.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">Open Source Contributions (Google DeepMind)</div>
-                </div>
-                <ul class="item-list" style="margin-top: 0.5rem;">
-                    <li><strong>Optax #1413 & Haiku #846:</strong> Merged learning-rate schedule edge cases and LayerNorm dtype/JIT regression tests, refined through maintainer review.</li>
-                    <li><strong>OpenSpiel #1557:</strong> Implemented Quarto in C++, including two-phase turns, win detection, undo, and tensor observations.</li>
-                    <li><strong>Distrax #334:</strong> Corrected JAX pytree handling for AOT compilation with donated arguments.</li>
-                </ul>
-            </div>
-
-        </main>
-    </div>
+            <div class="skill-category">Infrastructure</div>
+            <div class="skill-list">AWS (EC2, Lambda, S3), Azure, Docker, Kubernetes, Terraform, Git, CI/CD, Weights & Biases</div>
+        </div>
+    </section>
 
 </body>
 </html>
