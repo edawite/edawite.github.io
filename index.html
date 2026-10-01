@@ -160,7 +160,7 @@
 
     <header>
         <h1>Edjutawee Dawit</h1>
-        <div class="subtitle">AI Research Engineer &bull; ML Infrastructure &bull; Scaling Laws</div>
+        <div class="subtitle">AI Security & ML Systems Researcher &bull; Mechanistic Interpretability &bull; Scaling Laws</div>
         <div class="contact-links">
             <span>📍 NYC</span>
             <a href="mailto:edjutaweedawit@gmail.com">✉️ edjutaweedawit@gmail.com</a>
@@ -171,13 +171,23 @@
 
     <section>
         <h2>Education</h2>
+        
         <div class="entry">
             <div class="entry-header">
                 <div class="entry-title">Purdue University</div>
                 <div class="entry-date">Expected May 2027</div>
             </div>
             <div class="entry-role">B.S. in Artificial Intelligence</div>
-            <div class="entry-meta">Coursework: Data Structures & Algorithms, Object-Oriented Programming, Data Engineering in Python</div>
+            <div class="entry-meta">Founding member, Purdue AI Safety Club (alignment & red-teaming). Coursework: Data Structures & Algorithms, Object-Oriented Programming, Data Engineering in Python.</div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">BlueDot Impact</div>
+                <div class="entry-date">Completed Mar 2026</div>
+            </div>
+            <div class="entry-role">Technical AI Safety Course</div>
+            <div class="entry-meta">Selective cohort covering alignment methods, robustness evaluation, and frontier-model safety.</div>
         </div>
     </section>
 
@@ -187,14 +197,12 @@
         <div class="entry">
             <div class="entry-header">
                 <div class="entry-title">Microsoft</div>
-                <div class="entry-date">May 2026 – Aug 2026</div>
+                <div class="entry-date">Summer 2026</div>
             </div>
-            <div class="entry-role">Software Engineer Intern, Azure Reliability</div>
+            <div class="entry-role">Incoming Software Engineer Intern, Azure Applied AI</div>
             <ul>
-                <li>Shipped <strong>SHAP explanations and model monitoring</strong> (PSI/KS drift checks) for a production XGBoost risk platform, combining label-free performance estimates and fail-safe reports.</li>
-                <li>Designed a <strong>15-case, five-metric evaluation harness</strong> for risk accuracy, SHAP faithfulness, groundedness, feature overlap, and offline F1, backed by 200+ automated tests.</li>
-                <li>Integrated grounded LLM narratives into HTTP and Azure Storage Queue inference paths; isolated contextualization failures with bounded-latency fallback.</li>
-                <li>Provisioned private, keyless Azure OpenAI with Bicep and Entra ID/managed identity.</li>
+                <li>Joining Azure team building large-scale model deployment, monitoring, and evaluation infrastructure for production AI systems.</li>
+                <li><em>Prior project context:</em> Designed a 15-case, five-metric evaluation harness for risk accuracy, SHAP faithfulness, groundedness, feature overlap, and offline F1, backed by 200+ automated tests.</li>
             </ul>
         </div>
 
@@ -205,9 +213,8 @@
             </div>
             <div class="entry-role">LLM Researcher</div>
             <ul>
+                <li>Built an LLM-driven cybersecurity intelligence system; probed robustness under adversarial prompt perturbations and conflicting evidence injection, surfacing interpretability failure modes.</li>
                 <li>Engineered a modular Python framework leveraging LLMs to enrich cybersecurity indicators with automated tagging, contextual narratives, and inter-indicator relationship mapping.</li>
-                <li>Built an LLM cybersecurity-intelligence system and adversarial evaluation workflow; exposed confident, incorrect threat conclusions under prompt perturbations and conflicting evidence.</li>
-                <li>Designed a production-ready architecture with Dockerized deployment, JSON-based data contracts, and extensible APIs for enterprise threat analysis pipelines.</li>
             </ul>
         </div>
 
@@ -216,23 +223,22 @@
                 <div class="entry-title">NASA Earth Science Technology Office (ESTO)</div>
                 <div class="entry-date">May 2025 – Aug 2025</div>
             </div>
-            <div class="entry-role">ML Engineer / AI Researcher</div>
+            <div class="entry-role">Software Engineer Intern / ML Engineer</div>
             <ul>
-                <li>Engineered a hybrid flood detection system achieving <strong>0.92 IoU and 10× CPU speedup</strong> vs UNet baseline through a PyTorch→ONNX→TensorRT optimization pipeline for edge deployment.</li>
-                <li>Developed a real-time SAR image processing pipeline for Sentinel-1 satellite tiles, achieving <strong>250ms inference latency</strong> and enabling 5% faster flood detection response.</li>
-                <li>Architected a modular, fault-tolerant system with a reproducible evaluation harness, improving challenge submission scores by 8%.</li>
+                <li>Built a <strong>PyTorch→ONNX→TensorRT</strong> pipeline achieving <strong>0.92 IoU and 10× CPU speedup</strong> for real-time SAR flood detection; evaluated degradation under distribution shift.</li>
+                <li>Developed a real-time SAR image processing pipeline for Sentinel-1 satellite tiles, achieving 250ms inference latency and enabling 5% faster flood detection response.</li>
             </ul>
         </div>
 
         <div class="entry">
             <div class="entry-header">
                 <div class="entry-title">Purdue University</div>
-                <div class="entry-date">Spring 2025</div>
+                <div class="entry-date">Nov 2025 – Present</div>
             </div>
-            <div class="entry-role">Computational Researcher</div>
+            <div class="entry-role">Undergraduate Researcher (Prof. Abulhair Saparov)</div>
             <ul>
-                <li>Engineered a fully autonomous AI research assistant screening 2,000+ academic papers using Selenium, GPT-4 API, and local Ollama models—reducing faculty workload by 95%.</li>
-                <li>Automated real-time browser workflows, abstract extraction, and pedagogy tagging using LLM prompts, regex parsing, and logic filters.</li>
+                <li>Ran Transformer depth sweeps (<strong>2–24 layers, 3 seeds each</strong>) on ACCESS/Anvil GPUs to study modular-arithmetic generalization; tracked train/test behavior in Weights & Biases.</li>
+                <li>Analyzed memorization, weight decay, and Fourier representations in held-out generalization; designed synthetic tasks for self-verification and failure prediction.</li>
             </ul>
         </div>
 
@@ -241,11 +247,11 @@
                 <div class="entry-title">Purdue University</div>
                 <div class="entry-date">Jan 2025 – May 2025</div>
             </div>
-            <div class="entry-role">Backend Engineer</div>
+            <div class="entry-role">Computational / Backend Engineer</div>
             <ul>
+                <li>Engineered a fully autonomous AI research assistant screening 2,000+ academic papers using Selenium, GPT-4 API, and local Ollama models—reducing faculty workload by 95%.</li>
                 <li>Built a distributed document processing pipeline using Python multiprocessing + Redis, achieving <strong>100+ papers/hour throughput</strong> across 2,000+ academic papers with 95% automation accuracy.</li>
-                <li>Engineered a fault-tolerant system with checkpointing and idempotent job processing, deployed on AWS EC2 spot instances with auto-scaling capabilities.</li>
-                <li>Implemented comprehensive monitoring with Prometheus metrics and Grafana dashboards tracking p95 latency, throughput, and cost optimization.</li>
+                <li>Engineered a fault-tolerant system with checkpointing and idempotent job processing, deployed on AWS EC2 spot instances with Prometheus/Grafana monitoring tracking p95 latency.</li>
             </ul>
         </div>
 
@@ -257,88 +263,81 @@
             <div class="entry-role">Full-Stack Software Engineer Intern</div>
             <ul>
                 <li>Designed an AI-powered lesson planning platform serving 500+ educators with React + Flask microservices, achieving 99.5% uptime and a 70% reduction in planning time.</li>
-                <li>Implemented ChatGPT API integration with rate limiting and caching; optimized PostgreSQL queries with indexing strategies for <strong>sub-100ms response times</strong>.</li>
-                <li>Created a CI/CD pipeline with GitHub Actions and Docker containerization; reduced production deploy time from 15 minutes to 3 minutes with zero-downtime releases.</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <div class="entry-title">John P Stevens</div>
-                <div class="entry-date">Spring 2024</div>
-            </div>
-            <div class="entry-role">Machine Learning Researcher</div>
-            <ul>
-                <li>Conducted hyperparameter sweeps and ablation studies comparing SVM, Gradient Boosting, LSTM, and ANN models across 3 real-world datasets.</li>
-                <li>Cross-validated with 50+ academic sources and implemented reproducible baselines from Hugging Face and PyTorch.</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <div class="entry-title">Independent AI Researcher</div>
-                <div class="entry-date">Winter 2024</div>
-            </div>
-            <div class="entry-role">Reinforcement Learning Chess Agent</div>
-            <ul>
-                <li>Developed a reinforcement learning chess agent trained via self-play and policy gradients, evaluated against Stockfish.</li>
-                <li>Automated gameplay via Selenium, training the agent to <strong>1800 ELO</strong> (top 15% of players) in 500+ self-play episodes.</li>
+                <li>Implemented ChatGPT API integration with rate limiting and caching; optimized PostgreSQL queries with indexing strategies for sub-100ms response times.</li>
             </ul>
         </div>
 
         <div class="entry">
             <div class="entry-header">
                 <div class="entry-title">Temple University</div>
-                <div class="entry-date">Summer 2023</div>
+                <div class="entry-date">Jun 2023 – Aug 2023</div>
             </div>
             <div class="entry-role">Computer Vision Researcher</div>
             <ul>
-                <li>Developed and evaluated Convolutional Neural Networks (CNNs) for image classification, focusing on model optimization techniques.</li>
-                <li>Applied transfer learning and data augmentation to boost accuracy and reduce overfitting in low-resource image datasets.</li>
+                <li>Researched CNN optimization for image recognition via transfer learning and data augmentation; improved model accuracy and generalization on classification benchmarks.</li>
             </ul>
         </div>
     </section>
 
     <section>
-        <h2>Publications & Preprints</h2>
+        <h2>Publications & Research Projects</h2>
 
         <div class="entry">
-            <div class="entry-title">FinRL Contest 2025 Task 1: Reinforcement Learning for SPY Trading</div>
-            <div class="entry-meta">Accepted to IEEE IDS 2025 (FinRLFM Track)</div>
+            <div class="entry-title">Algorithmic Generalization in Deep Transformers</div>
+            <div class="entry-meta">In Submission to NeurIPS 2026</div>
             <ul>
-                <li>Evaluated 5 Deep RL algorithms (DQN, Double DQN, PPO, SAC, A2C) in continuous action environments.</li>
-                <li>Integrated DeepSeek LLM sentiment scores to improve the A2C portfolio's Sharpe Ratio by 12%.</li>
+                <li>Used scratchpad tokens as a mechanistic probe; Fourier analysis revealed sequential computation steps—not parameter capacity—are the true bottleneck for grokking.</li>
             </ul>
         </div>
 
         <div class="entry">
-            <div class="entry-title">A Two-Phase Scaling Law for Neural Chess Search</div>
-            <div class="entry-meta">Preprint / IEEE CoG Submission</div>
+            <div class="entry-title">Backdoor Trigger Detection | Jane Street Dormant LLM Puzzle</div>
+            <div class="entry-meta">2026</div>
             <ul>
-                <li>Designed and parallelized a fixed-anchor tournament of <strong>7,000+ games</strong> across an HPC cluster to evaluate Stockfish 16 (NNUE) scaling efficiency.</li>
-                <li>Identified a Two-Phase scaling law, proving highly accurate neural priors reduce the marginal utility of deep search by ~66% relative to classical baselines.</li>
+                <li>Probed hidden triggers in three <strong>671B-parameter DeepSeek-V3 fine-tunes</strong> via black-box probing and activation-layer SNR analysis across 13 attention layers.</li>
+                <li>Submitted methodology and findings to the $50k AI safety prize.</li>
             </ul>
         </div>
 
         <div class="entry">
-            <div class="entry-title">When Annealed Causal Erasure Fails to Induce Algorithmic Transfer</div>
-            <div class="entry-meta">Submitted to NeurIPS 2026 PriGM Workshop</div>
+            <div class="entry-title">Two-Phase Scaling Law for Neural Chess Search</div>
+            <div class="entry-meta">Submitted to IEEE CoG 2026</div>
             <ul>
-                <li>Implemented a custom training intervention (Annealed Causal Erasure) to suppress operand-position residual states in Transformers using 3 WAIT tokens.</li>
-                <li>Analyzed grokking and representation transfer across 24 modular-inversion runs, identifying a 100% train / 0% test separation.</li>
+                <li>Designed and parallelized a fixed-anchor tournament of <strong>7,000+ games</strong> across an HPC cluster to evaluate Stockfish 16 (NNUE) depth scaling.</li>
+                <li>Validated a two-phase law (R²=0.984, Chow test F=19.02), quantifying ~66% per-ply gain reduction vs. classical engines.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-title">Mechanistic Interpretability of a DQN Chess Agent</div>
+            <div class="entry-meta">2024 – 2025</div>
+            <ul>
+                <li>Identified neuron clusters encoding attack/defense/king-safety inside an RL chess agent trained via self-play and policy gradients to 1800 ELO.</li>
+                <li>Discovered phase transitions in internal representations corresponding to brittle value estimation and policy overfitting.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-title">RL for SPY Trading</div>
+            <div class="entry-meta">Accepted as Full Paper to IEEE IDS 2025 (FinRLFM Track)</div>
+            <ul>
+                <li>Demonstrated DQN/Double DQN outperform SAC/A2C in noisy market environments.</li>
+                <li>Integrated LLM-based sentiment signals via DeepSeek, improving Sharpe Ratio metrics.</li>
             </ul>
         </div>
     </section>
 
     <section>
-        <h2>Projects & Open Source</h2>
+        <h2>Engineering Projects & Open Source</h2>
 
         <div class="entry">
             <div class="entry-header">
-                <div class="entry-title">Jane Street [Project Name]</div>
+                <div class="entry-title">Google DeepMind Libraries (Optax / Haiku)</div>
+                <div class="entry-date">2025</div>
             </div>
             <ul>
-                <li><em>[Please update this section with the details of your Jane Street project/competition]</em></li>
+                <li>Contributed edge-case, numerical-stability, and dtype correctness tests for learning-rate schedules and LayerNorm.</li>
+                <li>Patches merged into core training components used across DeepMind research pipelines.</li>
             </ul>
         </div>
 
@@ -348,19 +347,7 @@
             </div>
             <ul>
                 <li><strong>Anthropic Public Benchmark:</strong> Reduced simulated cycles from 147,734 to 1,026 (<strong>144x reduction</strong>) using dependency-DAG scheduling, SIMD fusion, and software pipelining.</li>
-                <li><strong>OpenAI Parameter Golf:</strong> Built a CPU-trained Transformer and n-gram ensemble; cut BPB 5.3%. Packed model, sidecars, and evaluator code into a <strong>15.95 MB payload</strong> by delta-coding 1.33M n-gram contexts.</li>
-                <li><strong>Serverless Image Pipeline:</strong> Built an AWS S3/Lambda pipeline optimizing cold-start latency to 250ms via provisioned concurrency and SQS buffering.</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <div class="entry-title">Google DeepMind Libraries (Open Source)</div>
-            </div>
-            <ul>
-                <li><strong>Optax #1413 & Haiku #846:</strong> Merged learning-rate schedule edge cases and LayerNorm dtype/JIT regression tests, refined through maintainer review.</li>
-                <li><strong>OpenSpiel #1557:</strong> Implemented Quarto in C++, including two-phase turns, win detection, undo, and tensor observations.</li>
-                <li><strong>Distrax #334:</strong> Corrected JAX pytree handling for AOT compilation with donated arguments.</li>
+                <li><strong>OpenAI Parameter Golf:</strong> Built a CPU-trained Transformer and n-gram ensemble; cut BPB 5.3%. Packed model, sidecars, and evaluator code into a <strong>15.95 MB payload</strong>.</li>
             </ul>
         </div>
     </section>
@@ -369,13 +356,13 @@
         <h2>Technical Skills</h2>
         <div class="skills-grid">
             <div class="skill-category">Languages & ML</div>
-            <div class="skill-list">Python, C++, Java, TypeScript, SQL, Bash, PyTorch, JAX, XGBoost, SHAP, ONNX, TensorRT</div>
+            <div class="skill-list">Python, C++, JAX, SQL, Bash, TypeScript, PyTorch, TensorFlow, Hugging Face, XGBoost, Ray, CUDA, TensorRT, ONNX, Triton, LangChain</div>
             
-            <div class="skill-category">Research</div>
-            <div class="skill-list">Model evaluations, red-teaming, interpretability, adversarial robustness, ablation studies</div>
+            <div class="skill-category">Research Topics</div>
+            <div class="skill-list">Mechanistic interpretability, adversarial evaluation, backdoor detection, activation probing, scaling-law analysis, RLHF, fine-tuning, quantization</div>
             
             <div class="skill-category">Infrastructure</div>
-            <div class="skill-list">AWS (EC2, Lambda, S3), Azure, Docker, Kubernetes, Terraform, Git, CI/CD, Weights & Biases</div>
+            <div class="skill-list">Docker, Kubernetes, AWS (EC2, S3, Lambda), FastAPI, Redis, PostgreSQL, Prometheus, Grafana, Weights & Biases, MLflow</div>
         </div>
     </section>
 
